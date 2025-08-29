@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAB432 Image Enhancer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        .container { max-width: 800px; margin: auto; }
+        .hidden { display: none; }
+        .auth-form, .image-actions { border: 1px solid #ccc; padding: 1em; margin-bottom: 1em; }
+        #imageList img { max-width: 100px; max-height: 100px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CAB432 Image Enhancer</h1>
+
+        <div id="loginSection" class="auth-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Use 'admin'/'adminpassword' or 'user'/'userpassword'</p>
+        </div>
+
+        <div id="appSection" class="hidden">
+            <p>Welcome, <span id="welcomeUser"></span>! <button id="logoutBtn">Logout</button></p>
+
+            <div class="image-actions">
+                <h3>Actions</h3>
+                <form id="uploadForm">
+                    <input type="file" id="imageFile" accept="image/*" required>
+                    <button type="submit">Upload Image</button>
+                </form>
+                 <hr>
+                <form id="unsplashForm">
+                    <input type="text" id="unsplashQuery" placeholder="e.g., 'nature'">
+                    <button type="submit">Fetch from Unsplash</button>
+                </form>
+            </div>
+
+            <h2>Your Images</h2>
+            <table id="imageList">
+                <thead>
+                    <tr>
+                        <th>Preview</th>
+                        <th>Original Name</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./uploads:/usr/src/app/uploads
+      - ./processed:/usr/src/app/processed
+      - ./database.db:/usr/src/app/database.db
+    env_file:
+      - .env
+    restart: always

@@ -1,13 +1,16 @@
-# Assignment 1 - REST API Project - Response to Criteria
+Assignment 1 - REST API Project - Response to Criteria
+================================================
 
-## Overview
+Overview
+------------------------------------------------
 
 - **Name:** Ayesha Yasin
 - **Student number:** n11841486
 - **Application name:** Cab432 Image Enhancer
 - **Two line description:** This REST API fetches images from Unsplash and applies a custom CPU-intensive image enhancement algorithm. It supports login with JWT, containerisation, and deployment on AWS.
 
-## Core criteria
+Core criteria
+------------------------------------------------
 
 ### Containerise the app
 
@@ -77,7 +80,8 @@
 - **Relevant files:**
     - `loadtest.sh`
 
-## Additional criteria
+Additional criteria
+------------------------------------------------
 
 ### External API
 
